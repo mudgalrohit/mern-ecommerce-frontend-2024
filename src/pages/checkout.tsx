@@ -86,7 +86,7 @@ const CheckOutForm = () => {
 const Checkout = () => {
   const location = useLocation();
   const clientSecret: string | undefined = location.state;
-  console.log(clientSecret, "helorohit");
+  //console.log(clientSecret, "helorohit");
   if (!clientSecret) return <Navigate to={"/shipping"} />;
   return (
     <Elements

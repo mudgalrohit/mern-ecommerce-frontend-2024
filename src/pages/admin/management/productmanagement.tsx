@@ -19,8 +19,8 @@ const Productmanagement = () => {
   const navigate = useNavigate();
   const {data, isLoading, isError} = useProductDetailsQuery(params.id!);
 
-  const {price, photo, name, stock, category,} = data?.product || {
-    photo: "",
+  const {price, photo , name, stock, category,} = data?.product || {
+    photo: {photo_id: "", url:""},
     category: "",
     name: "",
     stock: 0,
@@ -98,7 +98,7 @@ const Productmanagement = () => {
             <>
             <section>
           <strong>ID - {data?.product._id}</strong>
-          <img src={`${server}/${photo}`} alt="Product" />
+          <img src={`${photo.url}`} alt="Product" />
           <p>{name}</p>
           {stock > 0 ? (
             <span className="green">{stock} Available</span>

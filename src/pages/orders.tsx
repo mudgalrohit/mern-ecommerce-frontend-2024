@@ -42,7 +42,7 @@ const Orders = () => {
     if (data)
       setRows(
         data.orders.map((i) => ({
-          _id: i.user._id,
+          _id: i._id,
           amount: i.total,
           discount: i.discount,
           quantity: i.orderItems.length,

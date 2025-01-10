@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { useDeleteOrderMutation, useOrderDetailsQuery, useUpdateOrderMutation } from "../../../redux/api/orderAPI";
-import { server } from "../../../redux/store";
 import { UserReducerInitialState } from "../../../types/reducer-types";
 import { OrderItem } from "../../../types/types";
 import { Skeleton } from "../../../components/loader";
@@ -86,7 +85,7 @@ const TransactionManagement = () => {
                 <ProductCard
                   key={i._id}
                   name={i.name}
-                  photo={`${server}/${i.photo}`}
+                  photo={`${i.photo}`}
                   productId={i.productId}
                   _id={i._id}
                   quantity={i.quantity}
