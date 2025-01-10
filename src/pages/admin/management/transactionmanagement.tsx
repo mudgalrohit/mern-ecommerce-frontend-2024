@@ -2,10 +2,10 @@ import { FaTrash } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
+import { Skeleton } from "../../../components/loader";
 import { useDeleteOrderMutation, useOrderDetailsQuery, useUpdateOrderMutation } from "../../../redux/api/orderAPI";
 import { UserReducerInitialState } from "../../../types/reducer-types";
 import { OrderItem } from "../../../types/types";
-import { Skeleton } from "../../../components/loader";
 import { responseToast } from "../../../utils/features";
 
 const defaultData = {
